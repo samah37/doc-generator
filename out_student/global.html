@@ -104,7 +104,7 @@
 
 
 <div class="description">
-    Shema de la base de données des utilisateurs (users)
+    Shema de la base de données des étudiants (students)
 </div>
 
 
@@ -155,7 +155,7 @@
 
             
 
-            <td class="description last">LE nom de l'étudiant.</td>
+            <td class="description last">Le nom de l'étudiant.</td>
         </tr>
 
     
@@ -178,7 +178,7 @@
 
             
 
-            <td class="description last">LE prénom de l'étudiant.</td>
+            <td class="description last">Le prénom de l'étudiant.</td>
         </tr>
 
     
@@ -201,7 +201,7 @@
 
             
 
-            <td class="description last">LE niveau d'étude de l'étudiant.</td>
+            <td class="description last">Le niveau d'étude de l'étudiant.</td>
         </tr>
 
     
@@ -224,7 +224,7 @@
 
             
 
-            <td class="description last">LE droupe l'étudiant.</td>
+            <td class="description last">Le groupe l'étudiant.</td>
         </tr>
 
     
@@ -345,7 +345,9 @@
 
 
 <div class="description">
-    On cherche c'est la matricule n'existait pas déja , si c'est vérifié on ajoute l'étudiant on génère son mot de passe et on le crypte, email et username et on on les retourne avec son id pour ajouter un user relié à lui
+    Permettre d'ajouter un étudient. On cherche si la matricule introduite n'existait pas déja .Si c'est vérifié, on ajoute l'étudiant 
+on génère son mot de passe et on le crypte,on génère l' email et le username et on les retourne avec son 'id' pour pouvoir ajouter un user 
+relié à lui .
 </div>
 
 
@@ -495,7 +497,7 @@
 
 
 <div class="description">
-    Controlleur du chemin '/'
+    Permettre de récupérer un tableau contenant tous les étudiants qui existent dans la base de données
 </div>
 
 
@@ -542,7 +544,7 @@
 
             
 
-            <td class="description last">le resultat qui est un tableau d'étudiantss</td>
+            <td class="description last">le resultat qui est un tableau d'étudiants</td>
         </tr>
 
     
@@ -627,7 +629,8 @@
 
 
 <div class="description">
-    Controlleur du chemin '/:id'
+        Permettre d'obtenire l'objet étudiant du ID si il existe dans la base de données 
+
 </div>
 
 
@@ -777,7 +780,7 @@
 
 
 <div class="description">
-    Controlleur du chemin '/update/:id'
+    Permettre de mettre à jour l'objet étudiant de ID
 </div>
 
 
