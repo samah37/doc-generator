@@ -30,8 +30,8 @@
 const bcrypt = require("bcryptjs");
 
 /**
- * Controlleur du chemin '/'
- * @param res - le resultat qui est un tableau d'étudiantss
+ * Permettre de récupérer un tableau contenant tous les étudiants qui existent dans la base de données
+ * @param res - le resultat qui est un tableau d'étudiants
  */
 exports.getAll = function(req, res) {
     Student.find(function(err, students) {
@@ -54,7 +54,7 @@ exports.getAll = function(req, res) {
  */
 
 /**
- * Controlleur du chemin '/:id'
+ * Permettre d'obtenire l'objet étudiant du ID si il existe dans la base de données 
  * @param req - la requete contenant l'id de l'étudiant qu'on cherche
  * @param res - le resultat contenant l'objet étudiant en question 
  */
@@ -66,7 +66,7 @@ exports.getById = function(req, res) {
 }
 
 /**
- * Controlleur du chemin '/update/:id'
+ * Permettre de mettre à jour l'objet étudiant de ID
  * @param req - la requete contenant l 'id qu'on cherche et l'objet étudiant modifié
  */
 exports.update = function(req, res) {
@@ -89,12 +89,11 @@ exports.update = function(req, res) {
 }
 
 /**
- * Controlleur du chemin '/add'
  * @param req - la requete contenant l'objet étudiant à insérer
  * @param res - le resultat contenant les informations nécessaire pour ajout d'un utilisateur relié à l'étudaint
- * @description On cherche c'est la matricule n'existait pas déja , si c'est vérifié on ajoute l'étudiant 
- * on génère son mot de passe et on le crypte, email et username et on on les retourne avec son id pour ajouter un user 
- * relié à lui
+ * @description Permettre d'ajouter un étudient. On cherche si la matricule introduite n'existait pas déja .Si c'est vérifié, on ajoute l'étudiant 
+ * on génère son mot de passe et on le crypte,on génère l' email et le username et on les retourne avec son 'id' pour pouvoir ajouter un user 
+ * relié à lui .
  */
 exports.add = function(req, res) {
     
